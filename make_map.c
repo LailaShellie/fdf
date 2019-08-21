@@ -28,7 +28,7 @@ void		init_lines(t_map_lines *m_l, t_map *prev_line)
 t_map		*make_node(char *str, int y, int x)
 {
 	t_map	*new;
-	int 	z;
+	int		z;
 
 	z = -1;
 	while (str[++z])
@@ -98,11 +98,13 @@ t_map		*make_map(char *buf)
 	{
 		if (!lines.map)
 		{
-			lines.map = make_line(lines.prev_line, lines.lines[lines.i], lines.i);
+			lines.map = make_line(lines.prev_line, \
+			lines.lines[lines.i], lines.i);
 			lines.prev_line = lines.map;
 		}
 		else
-			lines.prev_line = make_line(lines.prev_line, lines.lines[lines.i], lines.i);
+			lines.prev_line = make_line(lines.prev_line, \
+			lines.lines[lines.i], lines.i);
 	}
 	ft_free_mas(lines.lines, lines.i);
 	return (lines.map);

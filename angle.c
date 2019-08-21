@@ -15,26 +15,22 @@
 void	rotate_x(int *y, int *z, t_win *win)
 {
 	int prev_y;
-	int prev_z;
 
 	prev_y = *y;
-	prev_z = *z;
-	*y = prev_y * cos(win->pos->alpha) + prev_z * sin(win->pos->alpha);
-	*z = prev_z * cos(win->pos->alpha) - prev_y * sin(win->pos->alpha);
+	*y = prev_y * cos(win->pos->alpha) + *z * sin(win->pos->alpha);
+	*z = *z * cos(win->pos->alpha) - prev_y * sin(win->pos->alpha);
 }
 
 void	rotate_y(int *x, int *z, t_win *win)
 {
 	int prev_x;
-	int prev_z;
 
 	prev_x = *x;
-	prev_z = *z;
-	*x = prev_x * cos(win->pos->beta) + prev_z * sin(win->pos->beta);
-	*z = -prev_x * sin(win->pos->beta) + prev_z * cos(win->pos->beta);
+	*x = prev_x * cos(win->pos->beta) + *z * sin(win->pos->beta);
+	*z = -prev_x * sin(win->pos->beta) + *z * cos(win->pos->beta);
 }
 
-void 	rotate_z(int *x, int *y, t_win *win)
+void	rotate_z(int *x, int *y, t_win *win)
 {
 	int prev_x;
 	int prev_y;
@@ -45,7 +41,7 @@ void 	rotate_z(int *x, int *y, t_win *win)
 	*y = prev_x * sin(win->pos->gamma) + prev_y * cos(win->pos->gamma);
 }
 
-void angle(int *x, int *y, int *z, t_win *win)
+void	angle(int *x, int *y, int *z, t_win *win)
 {
 	int prev_x;
 	int prev_y;

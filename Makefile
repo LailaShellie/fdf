@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.c validation.c map.c start.c make_map.c draw_line.c keyboard.c position.c angle.c
+SRC = main.c validation.c map.c start.c make_map.c draw_line.c keyboard.c position.c angle.c bresenham.c wu.c
 
-OBJ = main.o validation.o map.o start.o make_map.o draw_line.o keyboard.o position.o angle.o
+OBJ = main.o validation.o map.o start.o make_map.o draw_line.o keyboard.o position.o angle.o bresenham.o wu.o
 
 NAME = fdf
 

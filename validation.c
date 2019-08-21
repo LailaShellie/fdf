@@ -93,7 +93,7 @@ int		check_line(char *str, int *num)
 int		check_map(int fd, char **buf)
 {
 	char	*str;
-	int 	num;
+	int		num;
 	char	*tmp;
 
 	num = 0;

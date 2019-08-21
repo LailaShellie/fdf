@@ -49,6 +49,9 @@ void			find_position(t_win *win)
 	if (!(pos = (t_pos *)ft_memalloc(sizeof(t_pos))))
 		return ;
 	win->pos = pos;
+	win->color[0] = 255;
+	win->color[1] = 255;
+	win->color[2] = 255;
 	pos->zoom = 15;
 	pos->dx = 0;
 	pos->dy = 0;

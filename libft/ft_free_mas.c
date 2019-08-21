@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-int		ft_free_mas(char **mas, int len)
+int			ft_free_mas(char **mas, int len)
 {
 	int		i;
 

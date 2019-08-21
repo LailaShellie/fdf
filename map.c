@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshellie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 18:07:28 by lshellie          #+#    #+#             */
-/*   Updated: 2019/08/15 18:07:29 by lshellie        6 ###   ########.fr       */
+/*   Created: 2019/08/21 21:28:16 by lshellie          #+#    #+#             */
+/*   Updated: 2019/08/21 21:28:17 by lshellie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,55 +18,6 @@ t_map		*get_last(t_map *map)
 		map = map->next;
 	return (map);
 }
-
-//void isoi(int *x, int *y, int z)
-//{
-//	int previous_x;
-//	int previous_y;
-//
-//	previous_x = *x;
-//	previous_y = *y;
-//	*x = (previous_x - previous_y) * cos(0.523599);
-//	*y = (previous_x + previous_y) * sin(0.523599) - z;
-//}
-//
-//void		iso_map(t_map *map)
-//{
-//	while (map)
-//	{
-//		if (!map->next)
-//		{
-//			isoi(&map->x, &map->y, map->z);
-//			map = map->next_line;
-//			continue ;
-//		}
-//		isoi(&map->x, &map->y, map->z);
-//		map = map->next;
-//	}
-//}
-//
-//void		size_map(t_map *map)
-//{
-//	while (map)
-//	{
-//		if (!map->next)
-//		{
-//			map->x *= 10;
-//			map->y *= 10;
-//			map->z *= 1;
-//			map->x += 700;
-//			map->y += 100;
-//			map = map->next_line;
-//			continue ;
-//		}
-//		map->z *= 1;
-//		map->x *= 10;
-//		map->y *= 10;
-//		map->x += 700;
-//		map->y += 100;
-//		map = map->next;
-//	}
-//}
 
 int			free_map(t_map *map)
 {
