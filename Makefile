@@ -18,14 +18,16 @@ NAME = fdf
 
 LIB = libft.a
 
-MLX_PATH = mlx
+MLX = mlx
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIB)
-	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJ) -lm -L. libft/$(LIB) -L $(MLX_PATH) -l mlx -framework OpenGL -framework AppKit
+$(NAME): $(OBJ) $(LIB) $(MLX)
+	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJ) -lm -L. libft/$(LIB) -L ./mlx -lmlx -framework OpenGL -framework AppKit
 $(LIB):
 	make -C ./libft
+$(MLX):
+	make -C ./mlx
 %.o: %.c
 	gcc -c $<
 clean:
